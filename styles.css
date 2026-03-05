@@ -328,15 +328,22 @@ nav.nav-scrolled {
   justify-content: center;
   opacity: 0;
   animation: fadeIn 0.6s forwards 0.3s;
+  /* Elevate above fixed CRT scanline overlay (z-index: 9999) */
+  position: relative;
+  z-index: 10000;
+  isolation: isolate;
 }
 
 .profile-frame {
   border: 1px solid var(--border);
-  padding: 12px;
+  padding: 14px;
   background: rgba(0, 255, 65, 0.03);
   position: relative;
   transition: all var(--transition-base);
-  width: 240px;
+  width: clamp(240px, 28vw, 320px);
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
 }
 
 .profile-frame:hover {
@@ -359,7 +366,8 @@ nav.nav-scrolled {
 .profile-img-wrap {
   position: relative;
   width: 100%;
-  aspect-ratio: 1 / 1;
+  flex: 1;
+  min-height: 0;
   overflow: hidden;
   border: 2px solid var(--green);
   box-shadow: 0 0 20px rgba(0, 255, 65, 0.3), inset 0 0 20px rgba(0, 255, 65, 0.05);
@@ -371,27 +379,14 @@ nav.nav-scrolled {
   object-fit: cover;
   object-position: top center;
   display: block;
-  filter: contrast(1.05) saturate(0.95);
-  transition: filter var(--transition-slow), transform var(--transition-slow);
+  filter: none;
+  transition: transform var(--transition-slow);
 }
 
 .profile-frame:hover .profile-img {
-  filter: contrast(1.1) saturate(1.1) hue-rotate(5deg);
-  transform: scale(1.02);
+  transform: scale(1.03);
 }
 
-/* Scanline overlay on photo */
-.profile-scanlines {
-  position: absolute;
-  inset: 0;
-  background: repeating-linear-gradient(0deg,
-      transparent,
-      transparent 3px,
-      rgba(0, 0, 0, 0.18) 3px,
-      rgba(0, 0, 0, 0.18) 4px);
-  pointer-events: none;
-  z-index: 1;
-}
 
 /* Corner bracket decorations */
 .profile-corner {
@@ -1718,45 +1713,6 @@ nav.nav-scrolled {
   transform: translateX(4px);
 }
 
-/* More Projects Card */
-.project-card-more {
-  border-style: dashed;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 300px;
-}
-
-.more-content {
-  text-align: center;
-  color: var(--green-dim);
-}
-
-.github-icon {
-  font-size: 64px;
-  color: var(--green);
-  margin-bottom: var(--spacing-md);
-  opacity: 0.5;
-  transition: all var(--transition-base);
-}
-
-.project-card-more:hover .github-icon {
-  opacity: 1;
-  transform: scale(1.1);
-  text-shadow: 0 0 20px var(--green);
-}
-
-.more-content h3 {
-  font-family: var(--font-terminal);
-  font-size: 24px;
-  color: var(--green);
-  margin-bottom: 8px;
-}
-
-.more-content p {
-  font-size: 14px;
-  margin-bottom: var(--spacing-md);
-}
 
 /* ===================================
    Tech Stack
@@ -2085,20 +2041,43 @@ nav.nav-scrolled {
 
 .form-feedback {
   margin-top: var(--spacing-md);
-  padding: 12px;
+  padding: 14px 16px;
   font-size: 13px;
+  font-family: var(--font-code);
   border-left: 3px solid;
   background: rgba(0, 255, 65, 0.05);
+  line-height: 1.9;
+  letter-spacing: 0.5px;
+}
+
+.form-feedback.pending {
+  border-color: var(--amber);
+  color: var(--amber);
+  animation: feedback-blink 1.2s step-end infinite;
+}
+
+@keyframes feedback-blink {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.6;
+  }
 }
 
 .form-feedback.success {
   border-color: var(--green);
   color: var(--green);
+  animation: none;
 }
 
 .form-feedback.error {
   border-color: var(--red);
   color: var(--red);
+  animation: none;
 }
 
 /* ===================================
