@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Hiten Mandhyan - Full Stack Developer & AI Engineer specializing in scalable web applications and machine learning solutions">
+  <meta name="keywords"
+    content="Full Stack Developer, AI Engineer, Python, JavaScript, Machine Learning, Web Development">
+  <meta name="author" content="Hiten Mandhyan">
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Hiten Mandhyan - Full Stack Developer">
+  <meta property="og:description"
+    content="Computer Science Student & Full Stack Developer specializing in AI-powered applications">
+  <meta property="og:type" content="website">
+
+  <title>Hiten Mandhyan — Full Stack Developer & AI Engineer</title>
+
+  <!-- Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=VT323&family=Courier+Prime:wght@400;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- Animated Cyber Background -->
+  <canvas id="cyber-bg" aria-hidden="true"></canvas>
+
+  <!-- CRT Overlay Effects -->
+  <div class="noise" aria-hidden="true"></div>
+
+  <!-- Navigation -->
+  <nav id="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo" aria-label="Home">hiten<span>$</span></a>
+      <ul class="nav-links">
+        <li><a href="#about">about</a></li>
+        <li><a href="#experience">experience</a></li>
+        <li><a href="#projects">projects</a></li>
+        <li><a href="#stack">stack</a></li>
+        <li><a href="#contact">contact</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero-section">
+    <div class="container">
+      <div class="hero-wrapper">
+
+        <!-- Profile Photo Column -->
+        <div class="hero-photo-col">
+          <div class="profile-frame">
+            <div class="profile-scan-label">USER_PROFILE</div>
+            <div class="profile-img-wrap">
+              <img src="profile.jpg" alt="Hiten Mandhyan" class="profile-img">
+              <div class="profile-scanlines" aria-hidden="true"></div>
+              <div class="profile-corner tl"></div>
+              <div class="profile-corner tr"></div>
+              <div class="profile-corner bl"></div>
+              <div class="profile-corner br"></div>
+            </div>
+            <div class="profile-status">
+              <span class="status-dot"></span>
+              <span class="profile-status-text">ONLINE — AVAILABLE FOR HIRE</span>
+            </div>
+            <div class="profile-id">ID: HM-2024-BCA</div>
+          </div>
+        </div>
+
+        <!-- Text Column -->
+        <div class="hero-text-col">
+          <div class="prompt-line">
+            <span class="prompt-symbol">~$</span> <span class="typing-text">whoami</span>
+          </div>
+          <h1 class="hero-title">
+            <span class="bracket">[</span> HITEN MANDHYAN <span class="bracket">]</span><span
+              class="cursor-blink"></span>
+          </h1>
+
+          <!-- Impact Statement -->
+          <div class="hero-impact">
+            <p class="hero-sub">
+              Full Stack Developer &amp; AI Engineer building <em>scalable web applications</em> and <em>intelligent
+                systems</em>
+              that solve real-world problems. Specialized in Python, JavaScript, and machine learning technologies.
+            </p>
+            <p class="hero-value">
+              Passionate about creating user-centric solutions that bridge the gap between complex technology
+              and everyday needs. From healthcare tracking to AI-powered analytics — I build products that matter.
+            </p>
+          </div>
+
+          <div class="hero-meta">
+            <div class="hero-meta-item" data-aos="fade-up" data-aos-delay="100">
+              <span class="meta-label">Education</span>
+              <span class="meta-value">Christ University</span>
+            </div>
+            <div class="hero-meta-item" data-aos="fade-up" data-aos-delay="200">
+              <span class="meta-label">CGPA</span>
+              <span class="meta-value">8.92/10.0</span>
+            </div>
+            <div class="hero-meta-item" data-aos="fade-up" data-aos-delay="300">
+              <span class="meta-label">Location</span>
+              <span class="meta-value">Delhi, India</span>
+            </div>
+            <div class="hero-meta-item" data-aos="fade-up" data-aos-delay="400">
+              <span class="meta-label">Status</span>
+              <span class="meta-value status-available">
+                <span class="status-dot"></span>Available
+              </span>
+            </div>
+          </div>
+
+          <div class="hero-cta">
+            <a href="#projects" class="btn btn-primary">
+              <i class="fas fa-code"></i> ./view_projects
+            </a>
+            <a href="#contact" class="btn btn-secondary">
+              <i class="fas fa-terminal"></i> ./get_in_touch
+            </a>
+            <button id="download-resume" class="btn btn-secondary">
+              <i class="fas fa-download"></i> ./download_resume
+            </button>
+          </div>
+
+          <!-- Terminal Command Interface -->
+          <div class="terminal-mini" data-aos="fade-up" data-aos-delay="500">
+            <div class="terminal-header">
+              <span>terminal.sh</span>
+            </div>
+            <div class="terminal-content">
+              <div class="terminal-line">
+                <span class="prompt">visitor@hiten:~$</span> <span id="terminal-input" class="terminal-typing"></span>
+              </div>
+              <div id="terminal-output"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section">
+    <div class="container">
+      <header class="section-header" data-aos="fade-up">
+        <span class="section-tag">01</span>
+        <h2 class="section-title">./about --verbose</h2>
+        <div class="section-line"></div>
+      </header>
+
+      <div class="about-grid">
+        <div class="about-content" data-aos="fade-right">
+          <div class="about-text">
+            <h3 class="subsection-title">Who I Am</h3>
+            <p>
+              I'm a <em>Full-Stack Developer</em> and <em>AI enthusiast</em> currently pursuing my Bachelor of Computer
+              Applications at Christ University Delhi NCR. My journey in tech started with a curiosity about how things
+              work and evolved into a passion for building solutions that make a difference.
+            </p>
+            <p>
+              What sets me apart is my unique blend of <em>technical expertise</em> and <em>problem-solving
+                mindset</em>.
+              With a background in biology and computer science, I bring a multidisciplinary perspective to software
+              development — combining analytical thinking with creative innovation.
+            </p>
+
+            <h3 class="subsection-title">What I Do</h3>
+            <p>
+              I specialize in building <em>end-to-end web applications</em> with a focus on scalability, user
+              experience,
+              and intelligent features. My tech stack includes <em>Python</em>, <em>JavaScript</em>, <em>Flask</em>,
+              <em>Node.js</em>, and modern frameworks like <em>TensorFlow</em> and <em>MediaPipe</em>.
+            </p>
+            <p>
+              From developing AI-powered study tracking systems to building healthcare applications with real-time data
+              synchronization — I love tackling challenges that require both technical depth and creative
+              problem-solving.
+            </p>
+
+            <h3 class="subsection-title">Beyond Code</h3>
+            <p>
+              When I'm not coding, I'm actively involved in campus leadership as a <em>Student Representative</em> and
+              <em>Peer Trainer</em> at CAPS. I believe in giving back to the community and helping others grow in their
+              tech journey.
+            </p>
+
+            <!-- Certification Badge -->
+            <div class="cert-wrapper">
+              <div class="cert-badge" data-aos="zoom-in">
+                <i class="fas fa-certificate"></i>
+                <span>Infosys Certified in C Programming</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <aside class="about-sidebar" data-aos="fade-left">
+          <!-- GitHub Activity -->
+          <div class="contrib-wrapper">
+            <div class="contrib-title">
+              <i class="fab fa-github"></i> GitHub Activity
+            </div>
+            <div id="contrib-graph" class="contrib-graph"></div>
+            <div class="contrib-stats">
+              <div class="contrib-stat">
+                <span class="stat-value" id="total-contributions">---</span>
+                <span class="stat-label">Contributions</span>
+              </div>
+              <div class="contrib-stat">
+                <span class="stat-value">52</span>
+                <span class="stat-label">Week Streak</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Leadership Roles -->
+          <div class="roles-section">
+            <h3 class="sidebar-title">
+              <i class="fas fa-users"></i> Leadership & Involvement
+            </h3>
+            <div class="roles-grid">
+              <div class="role-badge" data-aos="fade-up" data-aos-delay="100">
+                <i class="fas fa-user-graduate"></i>
+                <div class="role-content">
+                  <div class="role-title">Student Representative</div>
+                  <div class="role-org">Student Council</div>
+                </div>
+              </div>
+              <div class="role-badge" data-aos="fade-up" data-aos-delay="150">
+                <i class="fas fa-chalkboard-teacher"></i>
+                <div class="role-content">
+                  <div class="role-title">Peer Trainer</div>
+                  <div class="role-org">CAPS Delhi NCR</div>
+                </div>
+              </div>
+              <div class="role-badge" data-aos="fade-up" data-aos-delay="200">
+                <i class="fas fa-briefcase"></i>
+                <div class="role-content">
+                  <div class="role-title">Member</div>
+                  <div class="role-org">Placement Cell</div>
+                </div>
+              </div>
+              <div class="role-badge" data-aos="fade-up" data-aos-delay="250">
+                <i class="fas fa-code"></i>
+                <div class="role-content">
+                  <div class="role-title">Member</div>
+                  <div class="role-org">GDG New Delhi</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Achievements -->
+          <div class="achievements-section">
+            <h3 class="sidebar-title">
+              <i class="fas fa-trophy"></i> Key Achievements
+            </h3>
+            <ul class="achievements-list">
+              <li data-aos="fade-up">Merit scholarship for academic excellence</li>
+              <li data-aos="fade-up" data-aos-delay="50">45% traffic increase managing CAPS WordPress site</li>
+              <li data-aos="fade-up" data-aos-delay="100">Active contributor to student placement initiatives</li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="section">
+    <div class="container">
+      <header class="section-header" data-aos="fade-up">
+        <span class="section-tag">02</span>
+        <h2 class="section-title">./experience --list</h2>
+        <div class="section-line"></div>
+      </header>
+
+      <div class="timeline">
+        <!-- Work Experience -->
+        <article class="exp-card" data-aos="fade-up">
+          <div class="exp-icon">
+            <i class="fas fa-briefcase"></i>
+          </div>
+          <div class="exp-content">
+            <div class="exp-header">
+              <div>
+                <h3 class="exp-title">Web Developer</h3>
+                <p class="exp-company">
+                  <i class="fas fa-building"></i> Early Edge — Chennai, India
+                </p>
+              </div>
+              <time class="exp-date" datetime="2025-05">May 2025 – Jul 2025</time>
+            </div>
+            <ul class="exp-desc">
+              <li>
+                <strong>Delivered a production-ready website</strong> from concept to deployment, enhancing company's
+                digital presence and achieving 40% increase in user engagement metrics
+              </li>
+              <li>
+                <strong>Engineered dynamic UI components</strong> using modern web technologies (HTML5, CSS3,
+                JavaScript),
+                ensuring 100% responsive design across all devices
+              </li>
+              <li>
+                <strong>Optimized performance and SEO</strong> by implementing best practices, reducing page load time
+                by 35% and improving search visibility
+              </li>
+            </ul>
+            <div class="exp-tags">
+              <span class="tag">HTML5</span>
+              <span class="tag">CSS3</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">SEO</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Leadership Roles -->
+        <article class="exp-card" data-aos="fade-up">
+          <div class="exp-icon">
+            <i class="fas fa-users"></i>
+          </div>
+          <div class="exp-content">
+            <div class="exp-header">
+              <div>
+                <h3 class="exp-title">Student Representative & Peer Trainer</h3>
+                <p class="exp-company">
+                  <i class="fas fa-university"></i> Christ University Delhi NCR
+                </p>
+              </div>
+              <time class="exp-date" datetime="2025-08">Aug 2025 – Present</time>
+            </div>
+            <div class="exp-desc">
+              <p>
+                Leading student initiatives and providing academic mentorship as both a Student Council Representative
+                and Peer Trainer at CAPS. Organizing events, facilitating learning sessions, and bridging communication
+                between students and administration.
+              </p>
+            </div>
+            <div class="exp-tags">
+              <span class="tag">Leadership</span>
+              <span class="tag">Mentorship</span>
+              <span class="tag">Communication</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Education -->
+        <article class="exp-card" data-aos="fade-up">
+          <div class="exp-icon">
+            <i class="fas fa-graduation-cap"></i>
+          </div>
+          <div class="exp-content">
+            <div class="exp-header">
+              <div>
+                <h3 class="exp-title">Bachelor of Computer Applications</h3>
+                <p class="exp-company">
+                  <i class="fas fa-university"></i> Christ University Delhi NCR
+                </p>
+              </div>
+              <time class="exp-date" datetime="2024-07">Jul 2024 – Jul 2027</time>
+            </div>
+            <div class="exp-desc">
+              <p>
+                <strong>CGPA: 8.92/10.0</strong> — Comprehensive curriculum covering full-stack development,
+                AI/ML, data structures, algorithms, and software engineering principles. Active member of
+                GDG New Delhi and Placement Cell.
+              </p>
+            </div>
+            <div class="exp-tags">
+              <span class="tag">Computer Science</span>
+              <span class="tag">Software Engineering</span>
+              <span class="tag">AI/ML</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Project Section -->
+  <section id="featured-project" class="section section-dark">
+    <div class="container">
+      <header class="section-header" data-aos="fade-up">
+        <span class="section-tag">★</span>
+        <h2 class="section-title">./featured --highlight</h2>
+        <div class="section-line"></div>
+      </header>
+
+      <div class="featured-project" data-aos="fade-up">
+        <div class="featured-visual">
+          <div class="project-preview">
+            <div class="preview-window">
+              <div class="window-header">
+                <div class="window-dots">
+                  <span class="dot dot-r"></span>
+                  <span class="dot dot-y"></span>
+                  <span class="dot dot-g"></span>
+                </div>
+                <span class="window-title">smart-study-mate.py</span>
+              </div>
+              <div class="preview-content">
+                <div class="code-line"><span class="code-comment"># Real-time AI Focus Detection</span></div>
+                <div class="code-line"><span class="code-keyword">import</span> mediapipe <span
+                    class="code-keyword">as</span> mp</div>
+                <div class="code-line"><span class="code-keyword">import</span> cv2</div>
+                <div class="code-line"></div>
+                <div class="code-line"><span class="code-keyword">def</span> <span
+                    class="code-function">detect_attention</span>(frame):</div>
+                <div class="code-line"> <span class="code-comment"># Face Mesh detection</span></div>
+                <div class="code-line"> results = face_mesh.process(frame)</div>
+                <div class="code-line"> <span class="code-keyword">return</span> calculate_focus_score(results)</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="featured-content">
+          <div class="project-lang featured-lang">
+            <i class="fab fa-python"></i> Python / AI
+          </div>
+          <h3 class="featured-title">Smart Study Mate</h3>
+          <p class="featured-tagline">AI-Powered Focus & Productivity Tracking System</p>
+
+          <div class="featured-problem">
+            <h4><i class="fas fa-exclamation-circle"></i> Problem</h4>
+            <p>
+              Students struggle to maintain focus during study sessions and lack data-driven insights
+              into their productivity patterns.
+            </p>
+          </div>
+
+          <div class="featured-solution">
+            <h4><i class="fas fa-lightbulb"></i> Solution</h4>
+            <p>
+              Built an intelligent study tracking system using <strong>MediaPipe Face Mesh</strong> and
+              <strong>computer vision</strong> to detect real-time attention levels based on face presence,
+              eye openness, and head orientation.
+            </p>
+          </div>
+
+          <div class="featured-impact">
+            <h4><i class="fas fa-chart-line"></i> Impact</h4>
+            <ul>
+              <li>Real-time attention scoring with 90%+ accuracy</li>
+              <li>Comprehensive session analytics and focus metrics</li>
+              <li>Data persistence for long-term productivity insights</li>
+            </ul>
+          </div>
+
+          <div class="featured-tech">
+            <h4><i class="fas fa-tools"></i> Technologies</h4>
+            <div class="tech-badges">
+              <span class="tech-badge">Python</span>
+              <span class="tech-badge">MediaPipe</span>
+              <span class="tech-badge">OpenCV</span>
+              <span class="tech-badge">Streamlit</span>
+              <span class="tech-badge">Face Mesh</span>
+              <span class="tech-badge">JSON</span>
+            </div>
+          </div>
+
+          <div class="featured-links">
+            <a href="#" class="btn btn-primary" target="_blank" rel="noopener">
+              <i class="fab fa-github"></i> View on GitHub
+            </a>
+            <a href="#" class="btn btn-secondary" target="_blank" rel="noopener">
+              <i class="fas fa-external-link-alt"></i> Live Demo
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section">
+    <div class="container">
+      <header class="section-header" data-aos="fade-up">
+        <span class="section-tag">03</span>
+        <h2 class="section-title">./projects --all</h2>
+        <div class="section-line"></div>
+      </header>
+
+      <!-- Project Filters -->
+      <div class="project-filters" data-aos="fade-up">
+        <button class="filter-btn active" data-filter="all">
+          <i class="fas fa-th"></i> All Projects
+        </button>
+        <button class="filter-btn" data-filter="ai-ml">
+          <i class="fas fa-brain"></i> AI/ML
+        </button>
+        <button class="filter-btn" data-filter="fullstack">
+          <i class="fas fa-layer-group"></i> Full Stack
+        </button>
+        <button class="filter-btn" data-filter="web">
+          <i class="fas fa-globe"></i> Web
+        </button>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Project Card: Handwritten Digit Recognition -->
+        <article class="project-card" data-category="ai-ml" data-aos="fade-up">
+          <div class="project-header">
+            <div class="project-lang">
+              <i class="fab fa-python"></i> Python / ML
+            </div>
+            <div class="project-actions">
+              <a href="#" class="project-icon" aria-label="GitHub" target="_blank" rel="noopener">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="#" class="project-icon" aria-label="Live Demo" target="_blank" rel="noopener">
+                <i class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+          </div>
+
+          <h3 class="project-name">Handwritten Digit Recognition</h3>
+          <p class="project-desc">
+            Interactive neural network application that classifies handwritten digits in real-time.
+            Trained on MNIST dataset achieving 98% accuracy with instant predictions and confidence scores.
+          </p>
+
+          <div class="project-features">
+            <h4>Key Features:</h4>
+            <ul>
+              <li>Real-time digit classification with drawing canvas</li>
+              <li>Neural network trained on 60,000 training samples</li>
+              <li>Confidence score visualization</li>
+            </ul>
+          </div>
+
+          <div class="project-footer">
+            <div class="project-tech">
+              <span class="tech-badge">TensorFlow</span>
+              <span class="tech-badge">Keras</span>
+              <span class="tech-badge">NumPy</span>
+            </div>
+            <a href="#" class="project-link">
+              View Details <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- Project Card: AI Data Analyst Dashboard -->
+        <article class="project-card" data-category="ai-ml fullstack" data-aos="fade-up" data-aos-delay="100">
+          <div class="project-header">
+            <div class="project-lang">
+              <i class="fas fa-chart-bar"></i> Python / Flask
+            </div>
+            <div class="project-actions">
+              <a href="#" class="project-icon" aria-label="GitHub" target="_blank" rel="noopener">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="#" class="project-icon" aria-label="Live Demo" target="_blank" rel="noopener">
+                <i class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+          </div>
+
+          <h3 class="project-name">AI Data Analyst Dashboard</h3>
+          <p class="project-desc">
+            Automated analytics platform that processes large datasets and generates intelligent visual insights.
+            Flask backend pipeline handles data cleaning, transformation, and visualization generation.
+          </p>
+
+          <div class="project-features">
+            <h4>Key Features:</h4>
+            <ul>
+              <li>Automated data cleaning and preprocessing</li>
+              <li>Interactive visualizations with Matplotlib</li>
+              <li>REST API for data upload and analysis</li>
+            </ul>
+          </div>
+
+          <div class="project-footer">
+            <div class="project-tech">
+              <span class="tech-badge">Flask</span>
+              <span class="tech-badge">Pandas</span>
+              <span class="tech-badge">Matplotlib</span>
+            </div>
+            <a href="#" class="project-link">
+              View Details <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- Project Card: HealthVerse -->
+        <article class="project-card" data-category="fullstack" data-aos="fade-up" data-aos-delay="200">
+          <div class="project-header">
+            <div class="project-lang">
+              <i class="fab fa-js"></i> JavaScript / Firebase
+            </div>
+            <div class="project-actions">
+              <a href="#" class="project-icon" aria-label="GitHub" target="_blank" rel="noopener">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="#" class="project-icon" aria-label="Live Demo" target="_blank" rel="noopener">
+                <i class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+          </div>
+
+          <h3 class="project-name">HealthVerse</h3>
+          <p class="project-desc">
+            Comprehensive health and fitness tracking web application with real-time data synchronization.
+            Secure Firebase authentication and profile management for personalized health metrics.
+          </p>
+
+          <div class="project-features">
+            <h4>Key Features:</h4>
+            <ul>
+              <li>Real-time health metrics tracking and visualization</li>
+              <li>Secure user authentication with Firebase Auth</li>
+              <li>Responsive design for mobile and desktop</li>
+            </ul>
+          </div>
+
+          <div class="project-footer">
+            <div class="project-tech">
+              <span class="tech-badge">Firebase</span>
+              <span class="tech-badge">Firestore</span>
+              <span class="tech-badge">JavaScript</span>
+            </div>
+            <a href="#" class="project-link">
+              View Details <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- Project Card: UP Tourism Website -->
+        <article class="project-card" data-category="web" data-aos="fade-up" data-aos-delay="300">
+          <div class="project-header">
+            <div class="project-lang">
+              <i class="fas fa-code"></i> HTML / CSS / JS
+            </div>
+            <div class="project-actions">
+              <a href="#" class="project-icon" aria-label="GitHub" target="_blank" rel="noopener">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="#" class="project-icon" aria-label="Live Demo" target="_blank" rel="noopener">
+                <i class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+          </div>
+
+          <h3 class="project-name">UP Tourism Website</h3>
+          <p class="project-desc">
+            Multi-page tourism website showcasing cultural heritage sites across Uttar Pradesh.
+            Features user-friendly navigation and integrated chatbot for enhanced visitor experience.
+          </p>
+
+          <div class="project-features">
+            <h4>Key Features:</h4>
+            <ul>
+              <li>Detailed city guides with images and descriptions</li>
+              <li>Integrated AI chatbot for visitor assistance</li>
+              <li>Responsive layout optimized for all devices</li>
+            </ul>
+          </div>
+
+          <div class="project-footer">
+            <div class="project-tech">
+              <span class="tech-badge">HTML5</span>
+              <span class="tech-badge">CSS3</span>
+              <span class="tech-badge">JavaScript</span>
+            </div>
+            <a href="#" class="project-link">
+              View Details <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- More Projects Card -->
+        <article class="project-card project-card-more" data-aos="fade-up" data-aos-delay="400">
+          <div class="more-content">
+            <i class="fab fa-github github-icon"></i>
+            <h3>More Projects on GitHub</h3>
+            <p>Explore additional projects, contributions, and open-source work</p>
+            <a href="https://github.com/hitenmandhyan" class="btn btn-primary" target="_blank" rel="noopener">
+              <i class="fab fa-github"></i> Visit GitHub Profile
+            </a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tech Stack Section -->
+  <section id="stack" class="section">
+    <div class="container">
+      <header class="section-header" data-aos="fade-up">
+        <span class="section-tag">04</span>
+        <h2 class="section-title">./tech --stack</h2>
+        <div class="section-line"></div>
+      </header>
+
+      <div class="stack-categories">
+        <!-- Languages -->
+        <div class="stack-cat" data-aos="fade-up">
+          <h3 class="stack-cat-title">
+            <i class="fas fa-code"></i> Languages
+          </h3>
+          <div class="stack-items">
+            <div class="stack-item">
+              <span class="stack-name">
+                <i class="fab fa-python"></i> Python
+              </span>
+              <div class="stack-bar-bg">
+                <div class="stack-bar" style="width:95%" data-percentage="95"></div>
+              </div>
+              <span class="stack-percentage">95%</span>
+            </div>
+            <div class="stack-item">
+              <span class="stack-name">
+                <i class="fab fa-js"></i> JavaScript
+              </span>
+              <div class="stack-bar-bg">
+                <div class="stack-bar" style="width:90%; animation-delay:0.1s" data-percentage="90"></div>
+              </div>
+              <span class="stack-percentage">90%</span>
+            </div>
+            <div class="stack-item">
+              <span class="stack-name">
+                <i class="fas fa-database"></i> SQL
+              </span>
+              <div class="stack-bar-bg">
+                <div class="stack-bar" style="width:85%; animation-delay:0.2s" data-percentage="85"></div>
+              </div>
+              <span class="stack-percentage">85%</span>
+            </div>
+            <div class="stack-item">
+              <span class="stack-name">
+                <i class="fab fa-java"></i> Java
+              </span>
+              <div class="stack-bar-bg">
+                <div class="stack-bar" style="width:80%; animation-delay:0.3s" data-percentage="80"></div>
+              </div>
+              <span class="stack-percentage">80%</span>
+            </div>
+            <div class="stack-item">
+              <span class="stack-name">
+                <i class="fas fa-code"></i> C/C++
+              </span>
+              <div class="stack-bar-bg">
+                <div class="stack-bar" style="width:75%; animation-delay:0.4s" data-percentage="75"></div>
+              </div>
+              <span class="stack-percentage">75%</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Frontend -->
+        <div class="stack-cat" data-aos="fade-up" data-aos-delay="100">
+          <h3 class="stack-cat-title">
+            <i class="fas fa-paint-brush"></i> Frontend
+          </h3>
+          <div class="stack-items">
+            <div class="stack-item">
+              <span class="stack-name">
+                <i class="fab fa-html5"></i> HTML5
+              </span>
+              <div class="stack-bar-bg">
+                <div class="stack-bar" style="width:95%; animation-delay:0.1s" data-percentage="95"></div>
+              </div>
+              <span class="stack-percentage">95%</span>
+            </div>
+            <div class="stack-item">
+              <span class="stack-name">
+                <i class="fab fa-css3-alt"></i> CSS3
+              </span>
+              <div class="stack-bar-bg">
+                <div class="stack-bar" style="width:90%; animation-delay:0.2s" data-percentage="90"></div>
+              </div>
+              <span class="stack-percentage">90%</span>
+            </div>
+            <div class="stack-item">
+              <span class="stack-name">
+                <i class="fab fa-bootstrap"></i> Bootstrap
+              </span>
+              <div class="stack-bar-bg">
+                <div class="stack-bar" style="width:85%; animation-delay:0.3s" data-percentage="85"></div>
+              </div>
+              <span class="stack-percentage">85%</span>
+            </div>
+            <div class="stack-item">
+              <span class="stack-name">
+                <i class="fas fa-wind"></i> Tailwind CSS
+              </span>
+              <div class="stack-bar-bg">
+                <div class="stack-bar" style="width:80%; animation-delay:0.4s" data-percentage="80"></div>
+              </div>
+              <span class="stack-percentage">80%</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Backend / Databases -->
+        <div class="stack-cat" data-aos="fade-up" data-aos-delay="200">
+          <h3 class="stack-cat-title">
+            <i class="fas fa-server"></i> Backend / Databases
+          </h3>
+          <div class="stack-items">
+            <div class="stack-item">
+              <span class="stack-name">
+                <i class="fas fa-flask"></i> Flask
+              </span>
+              <div class="stack-bar-bg">
+                <div class="stack-bar" style="width:90%; animation-delay:0.1s" data-percentage="90"></div>
+              </div>
+              <span class="stack-percentage">90%</span>
+            </div>
+            <div class="stack-item">
+              <span class="stack-name">
+                <i class="fab fa-node-js"></i> Node.js
+              </span>
+              <div class="stack-bar-bg">
+                <div class="stack-bar" style="width:85%; animation-delay:0.2s" data-percentage="85"></div>
+              </div>
+              <span class="stack-percentage">85%</span>
+            </div>
+            <div class="stack-item">
+              <span class="stack-name">
+                <i class="fas fa-database"></i> MySQL
+              </span>
+              <div class="stack-bar-bg">
+                <div class="stack-bar" style="width:85%; animation-delay:0.3s" data-percentage="85"></div>
+              </div>
+              <span class="stack-percentage">85%</span>
+            </div>
+            <div class="stack-item">
+              <span class="stack-name">
+                <i class="fas fa-leaf"></i> MongoDB
+              </span>
+              <div class="stack-bar-bg">
+                <div class="stack-bar" style="width:80%; animation-delay:0.4s" data-percentage="80"></div>
+              </div>
+              <span class="stack-percentage">80%</span>
+            </div>
+            <div class="stack-item">
+              <span class="stack-name">
+                <i class="fas fa-fire"></i> Firebase
+              </span>
+              <div class="stack-bar-bg">
+                <div class="stack-bar" style="width:80%; animation-delay:0.5s" data-percentage="80"></div>
+              </div>
+              <span class="stack-percentage">80%</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- AI/ML & Tools -->
+        <div class="stack-cat" data-aos="fade-up" data-aos-delay="300">
+          <h3 class="stack-cat-title">
+            <i class="fas fa-brain"></i> AI/ML & Tools
+          </h3>
+          <div class="stack-items">
+            <div class="stack-item">
+              <span class="stack-name">
+                <i class="fas fa-project-diagram"></i> TensorFlow
+              </span>
+              <div class="stack-bar-bg">
+                <div class="stack-bar" style="width:85%; animation-delay:0.1s" data-percentage="85"></div>
+              </div>
+              <span class="stack-percentage">85%</span>
+            </div>
+            <div class="stack-item">
+              <span class="stack-name">
+                <i class="fas fa-video"></i> MediaPipe
+              </span>
+              <div class="stack-bar-bg">
+                <div class="stack-bar" style="width:80%; animation-delay:0.2s" data-percentage="80"></div>
+              </div>
+              <span class="stack-percentage">80%</span>
+            </div>
+            <div class="stack-item">
+              <span class="stack-name">
+                <i class="fas fa-eye"></i> OpenCV
+              </span>
+              <div class="stack-bar-bg">
+                <div class="stack-bar" style="width:75%; animation-delay:0.3s" data-percentage="75"></div>
+              </div>
+              <span class="stack-percentage">75%</span>
+            </div>
+            <div class="stack-item">
+              <span class="stack-name">
+                <i class="fab fa-git-alt"></i> Git/GitHub
+              </span>
+              <div class="stack-bar-bg">
+                <div class="stack-bar" style="width:95%; animation-delay:0.4s" data-percentage="95"></div>
+              </div>
+              <span class="stack-percentage">95%</span>
+            </div>
+            <div class="stack-item">
+              <span class="stack-name">
+                <i class="fas fa-code"></i> VS Code
+              </span>
+              <div class="stack-bar-bg">
+                <div class="stack-bar" style="width:90%; animation-delay:0.5s" data-percentage="90"></div>
+              </div>
+              <span class="stack-percentage">90%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <div class="container">
+      <header class="section-header" data-aos="fade-up">
+        <span class="section-tag">05</span>
+        <h2 class="section-title">./contact --send</h2>
+        <div class="section-line"></div>
+      </header>
+
+      <div class="contact-wrapper">
+        <div class="contact-info" data-aos="fade-right">
+          <h3 class="contact-title">Let's Build Something Together</h3>
+          <p class="contact-desc">
+            I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+            Whether you need a developer, collaborator, or just want to connect — feel free to reach out!
+          </p>
+
+          <div class="contact-methods">
+            <a href="mailto:hitenmandhyan124@gmail.com" class="contact-method">
+              <div class="method-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="method-content">
+                <span class="method-label">Email</span>
+                <span class="method-value">hitenmandhyan124@gmail.com</span>
+              </div>
+            </a>
+
+            <div class="contact-method">
+              <div class="method-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="method-content">
+                <span class="method-label">Location</span>
+                <span class="method-value">Delhi NCR, India</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="social-links">
+            <a href="https://github.com/hitenmandhyan" class="social-link" aria-label="GitHub" target="_blank"
+              rel="noopener">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://linkedin.com/in/hiten-mandhyan" class="social-link" aria-label="LinkedIn" target="_blank"
+              rel="noopener">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="mailto:hitenmandhyan124@gmail.com" class="social-link" aria-label="Email">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-form-wrapper" data-aos="fade-left">
+          <div class="terminal">
+            <div class="terminal-bar">
+              <div class="terminal-dots">
+                <span class="dot dot-r"></span>
+                <span class="dot dot-y"></span>
+                <span class="dot dot-g"></span>
+              </div>
+              <span class="terminal-title">contact.sh — compose message</span>
+            </div>
+            <div class="terminal-body">
+              <form id="contact-form" class="contact-form">
+                <div class="form-grid">
+                  <div class="form-row">
+                    <label for="name" class="form-label">name</label>
+                    <input type="text" id="name" name="name" class="form-input" placeholder="John Doe" required>
+                  </div>
+                  <div class="form-row">
+                    <label for="email" class="form-label">email</label>
+                    <input type="email" id="email" name="email" class="form-input" placeholder="john@example.com"
+                      required>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <label for="subject" class="form-label">subject</label>
+                  <input type="text" id="subject" name="subject" class="form-input"
+                    placeholder="Collaboration / Hire / Say Hi" required>
+                </div>
+                <div class="form-row">
+                  <label for="message" class="form-label">message</label>
+                  <textarea id="message" name="message" class="form-textarea"
+                    placeholder="// Write your message here...&#10;// I read every message and reply within 48h."
+                    required></textarea>
+                </div>
+                <div class="form-submit-row">
+                  <button type="submit" class="btn btn-primary">
+                    <i class="fas fa-paper-plane"></i> ./send_message.sh
+                  </button>
+                  <span class="form-hint">
+                    <i class="fas fa-lock"></i> encrypted end-to-end. no spam.
+                  </span>
+                </div>
+                <div id="form-feedback" class="form-feedback" style="display:none;"></div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-content footer-content-simple">
+        <div class="footer-brand">
+          <div class="nav-logo">hiten<span>$</span></div>
+          <p class="footer-tagline">Building the future, one line of code at a time.</p>
+        </div>
+        <div class="footer-social-row">
+          <a href="https://github.com/hitenmandhyan" class="footer-social-link" target="_blank" rel="noopener"
+            aria-label="GitHub"><i class="fab fa-github"></i> GitHub</a>
+          <a href="https://linkedin.com/in/hiten-mandhyan" class="footer-social-link" target="_blank" rel="noopener"
+            aria-label="LinkedIn"><i class="fab fa-linkedin"></i> LinkedIn</a>
+          <a href="mailto:hitenmandhyan124@gmail.com" class="footer-social-link" aria-label="Email"><i
+              class="fas fa-envelope"></i> Email</a>
+          <a href="#" id="footer-resume-link" class="footer-social-link"><i class="fas fa-file-pdf"></i> Resume</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy">
+          © <span id="year"></span> Hiten Mandhyan — Crafted with <em><i class="fas fa-heart"></i></em> and
+          <em>code</em>
+        </p>
+        <p class="footer-privacy">
+          No trackers. No cookies. Pure web.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top Button -->
+  <button id="scroll-top" class="scroll-top" aria-label="Scroll to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
