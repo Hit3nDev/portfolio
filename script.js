@@ -11,7 +11,7 @@
 const CONFIG = {
   githubUsername: 'hitenmandhyan',
   resumeURL: 'Hiten_Mandhyan_Resume_.pdf',
-  formEndpoint: 'https://formsubmit.co/ajax/hitenmandhyan124@gmail.com',
+  contactEmail: 'hitenmandhyan124@gmail.com',
   terminalCommands: ['help', 'about', 'projects', 'skills', 'contact', 'clear'],
   typingSpeed: 80,
   deleteSpeed: 50,
@@ -375,64 +375,22 @@ class ContactForm {
   }
 
   async handleSubmit(data) {
-    // Disable submit button while sending
-    if (this.submitBtn) this.submitBtn.disabled = true;
+    const to = CONFIG.contactEmail;
+    const subject = data.subject;
+    const body = `${data.message}\n\n— ${data.name} (${data.email})`;
+    const mailto = `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    const gmail = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(to)}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
-    // Step 1 — animated loading sequence
-    const loadingLines = [
-      '> establishing secure connection...',
-      '> encrypting message...',
-      '> transmitting packets...',
-    ];
-    for (const line of loadingLines) {
-      this.showFeedback(line, 'pending');
-      await this.delay(700);
-    }
+    this.showFeedback('> composing message...\n> opening your email app...', 'pending');
+    await this.delay(500);
 
-    try {
-      // Step 2 — send via FormSubmit (no API key needed)
-      const res = await fetch(CONFIG.formEndpoint, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-        body: JSON.stringify({
-          name: data.name,
-          email: data.email,
-          _replyto: data.email,
-          _subject: `[Portfolio] ${data.subject}`,
-          _template: 'table',
-          _captcha: 'false',
-          message: data.message,
-        }),
-      });
-      const result = await res.json().catch(() => ({}));
-      if (!res.ok || result.success === 'false' || result.success === false) {
-        throw new Error(result.message || `HTTP ${res.status}`);
-      }
+    // Redirect to the visitor's default mail client with everything pre-filled
+    window.location.href = mailto;
 
-      // Step 3 — success
-      this.showFeedback(
-        '> ✓ message delivered successfully\n> response received from server\n> [exit 0]',
-        'success'
-      );
-      this.form.reset();
-
-      // Auto-hide after 6 seconds
-      setTimeout(() => {
-        this.feedback.style.display = 'none';
-      }, 6000);
-
-    } catch (error) {
-      // Step 4 — error
-      console.error('Contact form error:', error);
-      const reason = (error && error.message) || 'network error';
-      const mailto = `mailto:hitenmandhyan124@gmail.com?subject=${encodeURIComponent(data.subject)}&body=${encodeURIComponent(`${data.message}\n\n— ${data.name} (${data.email})`)}`;
-      this.showFeedback(
-        `> ERROR: transmission failed\n> reason: ${String(reason).replace(/</g, '&lt;')}\n> <a href="${mailto}">send via your email app instead</a>`,
-        'error'
-      );
-    } finally {
-      if (this.submitBtn) this.submitBtn.disabled = false;
-    }
+    this.showFeedback(
+      `> ✓ draft ready — just hit send in your email app\n> no email app opened? <a href="${gmail}" target="_blank" rel="noopener">open in Gmail</a>`,
+      'success'
+    );
   }
 
   showFeedback(message, type) {

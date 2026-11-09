@@ -2503,3 +2503,8 @@ textarea:focus {
     text-shadow: none !important;
   }
 }
+.form-feedback a {
+  color: inherit;
+  text-decoration: underline;
+  font-weight: bold;
+}
