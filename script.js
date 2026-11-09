@@ -11,18 +11,11 @@
 const CONFIG = {
   githubUsername: 'hitenmandhyan',
   resumeURL: 'Hiten_Mandhyan_Resume_.pdf',
-  emailJSPublicKey: 'PfAa82JLr010fUgmm',
-  emailJSServiceID: 'service_dn0qroh',
-  emailJSTemplateID: 'template_4coxsve',
+  formEndpoint: 'https://formsubmit.co/ajax/hitenmandhyan124@gmail.com',
   terminalCommands: ['help', 'about', 'projects', 'skills', 'contact', 'clear'],
   typingSpeed: 80,
   deleteSpeed: 50,
 };
-
-// Initialize EmailJS
-if (typeof emailjs !== 'undefined') {
-  emailjs.init(CONFIG.emailJSPublicKey);
-}
 
 // ========================================
 // Utility Functions
@@ -397,17 +390,24 @@ class ContactForm {
     }
 
     try {
-      // Step 2 — send via EmailJS
-      await emailjs.send(
-        CONFIG.emailJSServiceID,
-        CONFIG.emailJSTemplateID,
-        {
+      // Step 2 — send via FormSubmit (no API key needed)
+      const res = await fetch(CONFIG.formEndpoint, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({
           name: data.name,
           email: data.email,
-          subject: data.subject,
+          _replyto: data.email,
+          _subject: `[Portfolio] ${data.subject}`,
+          _template: 'table',
+          _captcha: 'false',
           message: data.message,
-        }
-      );
+        }),
+      });
+      const result = await res.json().catch(() => ({}));
+      if (!res.ok || result.success === 'false' || result.success === false) {
+        throw new Error(result.message || `HTTP ${res.status}`);
+      }
 
       // Step 3 — success
       this.showFeedback(
@@ -423,9 +423,11 @@ class ContactForm {
 
     } catch (error) {
       // Step 4 — error
-      console.error('EmailJS error:', error);
+      console.error('Contact form error:', error);
+      const reason = (error && error.message) || 'network error';
+      const mailto = `mailto:hitenmandhyan124@gmail.com?subject=${encodeURIComponent(data.subject)}&body=${encodeURIComponent(`${data.message}\n\n— ${data.name} (${data.email})`)}`;
       this.showFeedback(
-        '> ERROR: transmission failed\n> retry sending message',
+        `> ERROR: transmission failed\n> reason: ${String(reason).replace(/</g, '&lt;')}\n> <a href="${mailto}">send via your email app instead</a>`,
         'error'
       );
     } finally {
