@@ -10,7 +10,7 @@
 
 const CONFIG = {
   githubUsername: 'hitenmandhyan',
-  resumeURL: 'Hiten_Mandhyan_Resume.pdf',
+  resumeURL: 'Hiten_Mandhyan_Resume_.pdf',
   emailJSPublicKey: 'PfAa82JLr010fUgmm',
   emailJSServiceID: 'service_dn0qroh',
   emailJSTemplateID: 'template_4coxsve',
@@ -226,9 +226,9 @@ class Terminal {
   async executeCommand(command) {
     const responses = {
       help: '> Available commands: help, about, projects, skills, contact, clear',
-      about: '> Full Stack Developer & AI Engineer | Building innovative solutions',
-      projects: '> 5+ projects | Smart Study Mate | HealthVerse | AI Analytics',
-      skills: '> Python • JavaScript • Flask • TensorFlow • Node.js • Firebase',
+      about: '> Full-Stack Developer & ML/AI Systems Engineer | 5 live production deployments',
+      projects: '> PredictWise AI | SciVerify | ResUAI | Retail Sales Analytics | Automated EDA',
+      skills: '> Python • FastAPI • React/Next.js • PyTorch • scikit-learn • SQL • Pandas',
       contact: '> Email: hitenmandhyan124@gmail.com | Status: AVAILABLE',
       clear: ''
     };

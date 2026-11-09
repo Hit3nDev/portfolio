@@ -887,6 +887,9 @@ nav.nav-scrolled {
 
 .cert-wrapper {
   margin-top: var(--spacing-lg);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
 }
 
 .cert-badge {
